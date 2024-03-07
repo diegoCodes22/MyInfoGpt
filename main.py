@@ -2,11 +2,12 @@ import os
 import sys
 import openai
 from random import randint
+from apikey import API_KEY
 
 
 def generate_response(prompt):
     client = openai.OpenAI(
-        api_key="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"
+        api_key=API_KEY
     )
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
